@@ -7,7 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Scanner;
+
+import codes.datas.User;
 
 public class MainDrive {
 
@@ -111,7 +114,27 @@ public class MainDrive {
 				
 //				이 줄의 코드가 실행된다 : break를 안만났다. => 불러온 내용이 null이 아니다.
 				
-				System.out.println(line);
+//				System.out.println(line);
+				
+//				사용자의 정보를 가공해서 출력.
+//				Ex.  아이유(1993) : 010-0000-0000 으로 출력되게 해보자
+//				사용자의 이름 / 본펀 / 나이를 분리하자.
+				
+				String[] userInfos = line.split(",");
+				
+//				이름 / 폰번호 / 나이 저장
+				
+				String userName = userInfos[0];
+				String userPhoneNum = userInfos[1];
+//				나이는 생년을 먼저 저장하고 계산해야 한다.
+//				생년월일은 현재 스트링으로 저장되어있기때문에 int으로 변환해줘야 한다.
+//				=> Wrapper 클래스 (Integer) 활용
+				int userBirthYear = Integer.parseInt(userInfos[2]);
+				
+				User user = new User(userName, userPhoneNum, userBirthYear);
+				
+				System.out.println(user);
+				
 				
 			}
 			
