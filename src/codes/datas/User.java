@@ -21,6 +21,16 @@ public class User {
 	}
 	
 	
+	public String toString() {
+		
+//		가공된 양식의 String을 이 메소드의 결과로 지정.
+//		String.format으로 가공한 문장을 리턴하자.
+		
+//		아이유(28세) : 010-7777-0000
+		
+		return String.format("%s(%d)세  : %s", this.name, this.GetKoreanAge(), this.phonNum);
+	}
+	
 	public User(String name, String phonNum, int birthYear) {
 		super();
 		this.name = name;
