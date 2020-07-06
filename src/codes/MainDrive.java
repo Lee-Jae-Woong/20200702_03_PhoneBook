@@ -172,7 +172,7 @@ public class MainDrive {
 //		저장된 데이터를 입력받자
 		Scanner myScan = new Scanner(System.in);
 		
-//		이름(String) => 폰번 (String) => 생년월일 (int) 순서대로 저장 
+//		이름(String) => 폰번 (String) => 생년월일 (int) 순서대로 저장
 		
 		System.out.println("이름 입력 : ");
 		
